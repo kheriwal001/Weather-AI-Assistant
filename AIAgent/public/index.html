@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather AI Assistant</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+                </svg>
+                Weather AI Assistant
+            </h1>
+        </header>
+        
+        <div class="chat-container">
+            <div class="chat-messages" id="chatMessages">
+                <div class="message ai-message">
+                    Hello! I'm your Weather AI Assistant. Ask me about the weather for any city today or in the future.
+                </div>
+                <div class="suggestions">
+                    <div class="suggestion-chip" onclick="useQuery(this.textContent)">What's the weather in New York today?</div>
+                    <div class="suggestion-chip" onclick="useQuery(this.textContent)">How's the weather in London tomorrow?</div>
+                    <div class="suggestion-chip" onclick="useQuery(this.textContent)">Paris weather next week</div>
+                </div>
+            </div>
+            
+            <div class="input-container">
+                <input type="text" id="messageInput" class="message-input" placeholder="Ask about weather in any city..." autocomplete="off">
+                <button class="send-button" id="sendButton">
+                    <span id="sendText">Send</span>
+                    <span id="sendLoader" class="loader" style="display: none;"></span>
+                </button>
+            </div>
+        </div>
+        
+        <footer>
+            © 2025 Weather AI Assistant | Powered by WeatherAPI
+        </footer>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
